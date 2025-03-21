@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:type="TaskPaneApp">
+    <Id>com.auditxcel.ai</Id>
+    <Version>1.0.0.0</Version>
+    <ProviderName>AuditXcel AI</ProviderName>
+    <DefaultLocale>en-US</DefaultLocale>
+    <DisplayName>AuditXcel AI</DisplayName>
+    <Description>An AI-powered audit tool for Excel.</Description>
+    
+    <Hosts>
+        <Host Name="Workbook" />
+    </Hosts>
+    
+    <DefaultSettings>
+        <SourceLocation DefaultValue="https://localhost:3000/taskpane.html" />
+    </DefaultSettings>
+    
+    <Permissions>ReadWriteDocument</Permissions>
+    
+    <Runtimes>
+        <Runtime resid="TaskPane.Url" />
+    </Runtimes>
+    
+    <Action xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides">
+        <TaskPaneApp>
+            <Actions>
+                <ShowTaskpane>
+                    <SourceLocation resid="TaskPane.Url" />
+                </ShowTaskpane>
+            </Actions>
+        </TaskPaneApp>
+    </Action>
+</OfficeApp>
